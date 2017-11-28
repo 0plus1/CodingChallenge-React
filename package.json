@@ -1,7 +1,7 @@
 {
   "name": "CodingChallenge-React",
   "version": "1.0.0",
-  "description": "Coding Challenge for React developers",
+  "description": "Coding Challenge for React developers: Ian Register",
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -11,20 +11,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0plus1/CodingChallenge-React.git"
+    "url": "git+https://github.com/ianregister/CodingChallenge-React.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/0plus1/CodingChallenge-React/issues"
+    "url": "https://github.com/ianregister/CodingChallenge-React/issues"
   },
-  "homepage": "https://github.com/0plus1/CodingChallenge-React#readme",
+  "homepage": "https://github.com/ianregister/CodingChallenge-React#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
+    "axios": "^0.17.1",
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^2.1.0",
     "laravel-mix": "^1.6.1",
+    "normalize.css": "^7.0.0",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
+    "redux": "^3.7.2",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2"

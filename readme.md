@@ -1,3 +1,6 @@
+## Notes to reviewer
+Hit a blocker with not being able to get Redux running fully - I think because I was using ES6 syntax perhaps I was losing some bindings. However I intended to pass the JSON data as state managed via Redux rather than finding a "hacky" way of passing props via react-router to the next view (also that's what the challenge asked for).
+
 ## Coding Challenge
 ###### React
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/adac75195f2a465c92137cea62a924af)](https://www.codacy.com/app/0plus1/CodingChallenge-React?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=0plus1/CodingChallenge-React&amp;utm_campaign=Badge_Grade)
@@ -52,7 +55,7 @@ Link to this view in the list of books.
 
 Recommended
 * Redux
-* [React router](https://reacttraining.com/react-router/) 
+* [React router](https://reacttraining.com/react-router/)
 * Bootstrap 4
 
 ### Software requirements
@@ -62,7 +65,7 @@ Recommended
 
 Clone and run:
 
-```bash 
+```bash
 npm install
 npm run watch
 ```
