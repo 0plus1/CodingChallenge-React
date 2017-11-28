@@ -1,0 +1,19 @@
+$gutter: 20px;
+
+$main-grid: (
+  columns: 12,
+  gutter: $gutter,
+);
+
+$books-grid: (
+  columns: 3,
+  media: "(min-width: 901px)",
+);
+
+$books-grid--medium: (
+  media: "(max-width: 900px)",
+);
+
+$books-grid--small: (
+  media: "(max-width: 600px)",
+);

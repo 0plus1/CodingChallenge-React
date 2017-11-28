@@ -1,12 +1,20 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Browser CSS reset
+@import "~normalize.css/normalize";
 
-// Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
+// Bourbon framework and Neat layout grid
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "~bourbon-neat/core/neat";
 
-html, body {
-  background-color: #000;
-  color: #636b6f;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-}
+// Layout grid using Neat
+@import "common/layout/settings";
+@import "common/layout/grid";
+
+// General "brand / theme" styles
+@import "common/theme/variables";
+@import "common/typography/fonts";
+@import "common/theme/elements";
+
+// Component styles
+@import "components/c-book-grid/c-book-grid";
+@import "components/c-book/c-book";
+@import "components/c-book/c-details";

@@ -4,3 +4,4 @@
 .idea
 *.iml
 mix-manifest.json
+.DS_Store
