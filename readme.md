@@ -1,5 +1,5 @@
 ## Notes to reviewer
-Hit a blocker with not being able to get Redux running fully - I think because I was using ES6 syntax perhaps I was losing some bindings. However I intended to pass the JSON data as state managed via Redux rather than finding a "hacky" way of passing props via react-router to the next view (also that's what the challenge asked for).
+I have made a bit of spaghetti here but need to review the Redux implementation. Possibly tripped myself up using the ES6 syntax to extend the React.Component class rather than using the React.createClass method. The connect() seems to be the failure, just couldn't connect my component containers to my store.
 
 ## Coding Challenge
 ###### React
