@@ -2,3 +2,9 @@ $main-grid: (
   columns: 12,
   gutter: 20px,
 );
+
+$book-grid: (
+  columns: 3,
+  gutter: 20px,
+  media: 600px,
+);
