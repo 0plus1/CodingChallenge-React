@@ -1,12 +1,8 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Browser CSS reset
+@import "~normalize.css/normalize";
 
-// Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
+// Semantic UI styles
+@import "~semantic-ui-css/semantic";
 
-html, body {
-  background-color: #000;
-  color: #636b6f;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-}
+// General "brand / theme" styles
+@import "common/theme/body";
