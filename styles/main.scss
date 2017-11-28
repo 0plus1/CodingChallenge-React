@@ -1,8 +1,13 @@
 // Browser CSS reset
 @import "~normalize.css/normalize";
 
-// Semantic UI styles
-@import "~semantic-ui-css/semantic";
+// Bourbon framework and Neat layout grid
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "~bourbon-neat/core/neat";
+
+// Layout grid using Neat
+@import "common/layout/settings";
+@import "common/layout/grid";
 
 // General "brand / theme" styles
 @import "common/theme/body";
