@@ -10,8 +10,11 @@
 @import "common/layout/grid";
 
 // General "brand / theme" styles
+@import "common/theme/variables";
 @import "common/typography/fonts";
-@import "common/theme/body";
+@import "common/theme/elements";
 
 // Component styles
+@import "components/c-book-grid/c-book-grid";
 @import "components/c-book/c-book";
+@import "components/c-book/c-details";

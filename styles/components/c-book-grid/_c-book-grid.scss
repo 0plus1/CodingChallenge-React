@@ -1,0 +1,11 @@
+.l-books-grid {
+  &__item {
+    @include grid-column(1 of 3, $books-grid);
+    @include grid-media($books-grid--medium) {
+      @include grid-column(1 of 2);
+    }
+    @include grid-media($books-grid--small) {
+      @include grid-column(1 of 1);
+    }
+  }
+}

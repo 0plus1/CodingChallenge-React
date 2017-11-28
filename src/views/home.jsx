@@ -1,13 +1,14 @@
 import React from 'react';
-import BooksGrid from '../components/BooksGrid';
+import Header from '../components/c-header/Header';
+import BooksGrid from '../components/c-book-grid/BooksGrid';
 
 const Home = () => (
   <div className="l-container">
     <div className="l-row">
-      <h1>Welcome Reader!</h1>
+      <Header/>
     </div>
     <div className="l-row">
-        <BooksGrid/>
+      <BooksGrid/>
     </div>
   </div>
 );
