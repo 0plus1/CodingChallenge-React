@@ -18,7 +18,11 @@ class BooksGrid extends React.Component {
       .then((response) => {
         const books = response.data;
         this.setState({ books });
-      });
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    ;
   }
 
   render() {
