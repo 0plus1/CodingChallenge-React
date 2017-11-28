@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Book from '../../components/c-book/Book';
 
 // Component that retrieves the JSON data for the books
-// and processes the data into
 class BooksGrid extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +34,11 @@ class BooksGrid extends React.Component {
               key={book.book_id}
               className="l-books-grid__item"
             >
-              <Book {...book} />
+              <Link
+                className="c-book-link"
+                to={{ pathname: `/book/${book.book_id}` }}>
+                <Book {...book} />
+              </Link>
             </li>
           ))
         }

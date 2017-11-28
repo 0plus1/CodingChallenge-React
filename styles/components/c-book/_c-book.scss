@@ -1,4 +1,5 @@
 .c-book {
+  background-color: $colour__grey--light;
   border: 1px solid $colour__blue--light;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -18,5 +19,13 @@
       top: 0;
       width: 100%;
     }
+  }
+}
+
+.c-book-link .c-book {
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $colour__blue--lightest;
   }
 }

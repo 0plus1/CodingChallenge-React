@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header (book) {
+function Header () {
   return (
     <header className="c-header">
       <h1>0Plus1 Coding Challenge</h1>
