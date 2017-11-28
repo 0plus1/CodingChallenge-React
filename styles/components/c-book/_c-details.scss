@@ -1,0 +1,13 @@
+.c-details {
+  padding: 12px 0 8px;
+
+  li {
+    line-height: 1.4rem;
+  }
+  &__label {
+    color: $colour__blue--light;
+    font-size: 0.8rem;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+}

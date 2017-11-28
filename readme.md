@@ -1,3 +1,6 @@
+## Notes to reviewer
+I have made a bit of spaghetti here but need to review the Redux implementation. Possibly tripped myself up using the ES6 syntax to extend the React.Component class rather than using the React.createClass method. The connect() seems to be the failure, just couldn't connect my component containers to my store.
+
 ## Coding Challenge
 ###### React
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/adac75195f2a465c92137cea62a924af)](https://www.codacy.com/app/0plus1/CodingChallenge-React?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=0plus1/CodingChallenge-React&amp;utm_campaign=Badge_Grade)
@@ -52,7 +55,7 @@ Link to this view in the list of books.
 
 Recommended
 * Redux
-* [React router](https://reacttraining.com/react-router/) 
+* [React router](https://reacttraining.com/react-router/)
 * Bootstrap 4
 
 ### Software requirements
@@ -62,7 +65,7 @@ Recommended
 
 Clone and run:
 
-```bash 
+```bash
 npm install
 npm run watch
 ```

@@ -1,0 +1,38 @@
+// Styling for base elements
+// There should be no class names used in these declarations
+
+html,
+body {
+  background-color: $colour__grey;
+  color: $colour__blue;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+// Non-ideal markup and styling but is not so important here
+h1 {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin: 1rem 0 1.8rem;
+}
+
+// Reset unordered lists globally
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

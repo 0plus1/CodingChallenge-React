@@ -18,6 +18,9 @@ mix.browserSync({
   proxy: false,
   files: ['public/dist/app.css', 'public/dist/app.js'],
   injectChanges: true,
+  notify: false,
+  logSnippet: false,
+  browser: 'safari technology preview',
 });
 mix.react('src/index.jsx', 'public/dist/app.js');
 mix.sass('styles/main.scss', 'public/dist/app.css');

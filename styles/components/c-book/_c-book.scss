@@ -1,0 +1,36 @@
+.c-book {
+  background-color: $colour__grey--light;
+  border: 1px solid $colour__blue--light;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 8px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $colour__blue--lightest;
+  }
+
+  &__image {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 75%;
+    position: relative;
+
+    img {
+      background-color: $colour__blue--lightest;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+.c-book-link .c-book {
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $colour__blue--lightest;
+  }
+}
