@@ -4,6 +4,11 @@
   border-radius: 4px;
   margin-bottom: 20px;
   padding: 8px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $colour__blue--lightest;
+  }
 
   &__image {
     height: 0;
