@@ -1,12 +1,18 @@
 import React from 'react';
+import 'sanitize.css';
+import './home.css';
+
+const HomeStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
 
 const Home = () => (
-  <div className="row">
-    <div className="col-12 text-center">
-      <h1>
-      Welcome!
-      </h1>
-    </div>
+  <div style={HomeStyle}>
+    <h1>
+    Welcome!
+    </h1>
   </div>
 );
 

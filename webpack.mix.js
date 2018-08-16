@@ -16,8 +16,7 @@ mix.browserSync({
     baseDir: 'public',
   },
   proxy: false,
-  files: ['public/dist/app.css', 'public/dist/app.js'],
+  files: ['public/dist/app.js'],
   injectChanges: true,
 });
 mix.react('src/index.jsx', 'public/dist/app.js');
-mix.sass('styles/main.scss', 'public/dist/app.css');

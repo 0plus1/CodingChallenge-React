@@ -9,33 +9,27 @@ Given the complete freedom on how to solve the challenge, an understanding of be
 
 Fork this repository and create a pull request when the challenge is complete.
 
-The test is tiered with an increasingly difficult set of requirements. **Only the first tier is required** but solving the remaining two is encouraged.
+The test is tiered with an increasingly difficult set of requirements. **Only the first tier is required** but solving all the tiers is encouraged.
 
-
-Please note that the time taken to complete this challenge will be taken into consideration, starting when you fork the repository and ending with the pull request.
-
-Please follow these coding guidelines:
-
-* [AirBnB](https://github.com/airbnb/javascript) style guide (already configured in ESLint)
+Sourcecode must fully adhere to the [AirBnB](https://github.com/airbnb/javascript) style guide, no overridden rules.
 
 #### Tier one.
 
 You are given a [URL](https://my-json-server.typicode.com/0plus1/CodingChallenge-react/books) which returns the JSON defined in the db.json file at the root of this project.
 Perform a GET to retrieve the data and render the result on the page however you see fit.
-Bootstrap 4 is already configured and ready to be used.
 
 Bonus points are awarded for (in order of importance):
 
-* Adding your own custom CSS
 * [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+* Using a HOC as the main page layout
 * Unit testing
+* CSS in js
 * Using [axios](https://github.com/axios/axios) for the API call
 
 #### Tier two.
 
 Perform the same task as above using Redux.
 
-Bonus points are awarded for nicely organising folders and files.
 
 #### Tier three.
 
@@ -47,13 +41,12 @@ Link to this view in the list of books.
 
 * Javascript ES6
 * React
-* SCSS
 * Webpack
 
 Recommended
 * Redux
 * [React router](https://reacttraining.com/react-router/) 
-* Bootstrap 4
+* [Styled Components](https://github.com/styled-components/styled-components)
 
 ### Software requirements
 * [YARN](https://yarnpkg.com/en/)
