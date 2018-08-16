@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Route,
 } from 'react-router-dom';
 
 import Home from './views/home';
 
 const Routes = () => (
-  <Router>
+  <HashRouter>
     <div>
       <Route exact path="/" component={Home} />
     </div>
-  </Router>
+  </HashRouter>
 );
 
 export default Routes;
