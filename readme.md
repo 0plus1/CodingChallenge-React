@@ -56,6 +56,7 @@ Recommended
 * Bootstrap 4
 
 ### Software requirements
+* [YARN](https://yarnpkg.com/en/)
 * [NPM](https://www.npmjs.com/get-npm)
 
 #### Install
@@ -63,15 +64,15 @@ Recommended
 Clone and run:
 
 ```bash 
-npm install
-npm run watch
+yarn install
+yarn watch
 ```
 
 Make sure everything is working, a browser window should open at the address _http://localhost:3000/_ displaying "_Welcome!_".
 Double check by running the provided unit tests.
 
 ```bash
-npm test
+yarn test
 ```
 
 ## License
