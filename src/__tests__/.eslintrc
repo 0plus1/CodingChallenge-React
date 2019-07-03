@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "rules": {
+        "react/jsx-filename-extension": "off"
+      }
+    }
+  ]
+}
