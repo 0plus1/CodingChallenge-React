@@ -1,52 +1,48 @@
 {
-  "name": "CodingChallenge-React",
-  "version": "1.0.0",
+  "name": "react-coding-challenge",
+  "version": "1.2.0",
   "description": "Coding Challenge for React developers",
-  "scripts": {
-    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/0plus1/CodingChallenge-React.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/0plus1/CodingChallenge-React/issues"
-  },
-  "homepage": "https://github.com/0plus1/CodingChallenge-React#readme",
+  "private": false,
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "laravel-mix": "^2.1",
+    "env-cmd": "^9.0.3",
+    "history": "^4.9.0",
     "prop-types": "^15.6.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-redux": "^5.0.7",
+    "query-string": "^6.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "redux": "^4.0.0",
-    "sanitize.css": "^6.0.0"
+    "react-scripts": "3.0.1",
+    "sanitize.css": "^10.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "babel-jest": "^21.2.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "browser-sync": "^2.23.6",
-    "browser-sync-webpack-plugin": "^1.2.0",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "17.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jest": "^21.18.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
-    "jest": "^23.5.0",
-    "react-test-renderer": "^16.4.2",
-    "identity-obj-proxy": "^3.0.0"
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

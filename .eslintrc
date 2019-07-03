@@ -2,13 +2,17 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "globals": {
-    "document": true
+    "localStorage": true,
+    "window": true,
+    "document": true,
+    "FileReader": true
   },
-  "settings": {
-    "import/resolver": {
-      "node": {
-          "paths": ["src"]
+  "overrides": [
+    {
+      "files": ["setupTests.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
       }
     }
-  }
+  ]
 }
