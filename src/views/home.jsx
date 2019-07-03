@@ -1,6 +1,5 @@
 import React from 'react';
-import 'sanitize.css';
-import './home.css';
+import PropTypes from 'prop-types';
 
 const HomeStyle = {
   display: 'flex',
@@ -8,12 +7,25 @@ const HomeStyle = {
   justifyContent: 'center',
 };
 
-const Home = () => (
+const Home = ({ match }) => (
   <div style={HomeStyle}>
     <h1>
-    Welcome!
+      Welcome!
     </h1>
+    {(match.params.testRouting) && (
+      <p>
+        {match.params.testRouting}
+      </p>
+    )}
   </div>
 );
+
+Home.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      testRouting: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default Home;

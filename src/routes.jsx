@@ -1,17 +1,18 @@
 import React from 'react';
 import {
-  HashRouter,
+  Router,
   Route,
+  Switch,
 } from 'react-router-dom';
-
-import Home from './views/home';
+import { createBrowserHistory } from 'history';
+import Home from './views/Home';
 
 const Routes = () => (
-  <HashRouter>
-    <div>
-      <Route exact path="/" component={Home} />
-    </div>
-  </HashRouter>
+  <Router history={createBrowserHistory()}>
+    <Switch>
+      <Route exact path="/:testRouting?" component={Home} />
+    </Switch>
+  </Router>
 );
 
 export default Routes;
