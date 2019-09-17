@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Books from '../components/books';
 
 require('../index.scss');
