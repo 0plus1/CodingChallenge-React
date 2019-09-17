@@ -1,13 +1,23 @@
 .books-table {
   table {
     border-collapse: collapse;
+    width: 100%;
     tr {
       td, th {
-        padding: 5px;
+        padding: 10px;
         border: 1px solid #999;
         vertical-align: top;
-        img {
-          width: 200px;
+        &.cover {
+          padding: 0px;
+          width: 300px;
+          img {
+            width: 100%;
+          }
+        }
+        &.id,
+        &.isbn,
+        &.published-at {
+          text-align: center;
         }
       }
     }

@@ -6,12 +6,12 @@ class BookRow extends React.Component {
         const book = this.props.book;
         return (
             <tr>
-                <td>{book.book_id}</td>
-                <td>{book.name}</td>
-                <td>{book.author}</td>
-                <td>{book.isbn}</td>
-                <td><img src={book.cover} alt={`${book.author} - ${book.name}`} /></td>
-                <td>{book.published_at}</td>
+                <td className="id">{book.book_id}</td>
+                <td className="name">{book.name}</td>
+                <td className="author">{book.author}</td>
+                <td className="isbn">{book.isbn}</td>
+                <td className="cover"><img src={book.cover} alt={`${book.author} - ${book.name}`} /></td>
+                <td className="published-at">{book.published_at}</td>
             </tr>
         );
     }
