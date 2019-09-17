@@ -1,17 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Books from '../components/books';
+
+require('../components/books/books.scss');
 
 const HomeStyle = {
-  display: 'flex',
+  display: 'block',
   alignItems: 'center',
   justifyContent: 'center',
 };
+
 
 const Home = ({ match }) => (
   <div style={HomeStyle}>
     <h1>
       Welcome!
     </h1>
+    <Books />
     {(match.params.testRouting) && (
       <p>
         {match.params.testRouting}
