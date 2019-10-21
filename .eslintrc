@@ -1,4 +1,7 @@
 {
+  "env": {
+    "jest": true,
+  },
   "extends": "airbnb",
   "parser": "babel-eslint",
   "globals": {
@@ -14,5 +17,8 @@
         "import/no-extraneous-dependencies": "off"
       }
     }
-  ]
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+  }
 }
