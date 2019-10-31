@@ -6,12 +6,16 @@ import {
 } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import BooksContainer from './container/BooksContainer';
+import BookContainer from "./container/BookContainer";
 
 const Routes = () => (
   <Router history={createBrowserHistory()}>
+    <>
     <Switch>
-      <Route exact path="/:testRouting?" component={BooksContainer} />
+      <Route exact path="/" component={BooksContainer} />
+      <Route path="/book/:id" component={BookContainer} />
     </Switch>
+    </>
   </Router>
 );
 
