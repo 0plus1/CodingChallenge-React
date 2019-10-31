@@ -1,9 +1,10 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import 'sanitize.css';
 
-import Routes from './routes';
+import Routes from './routes.tsx';
 
 ReactDOM.render(
   // TODO use jsx extension for this file, will require to eject the create-react-app
