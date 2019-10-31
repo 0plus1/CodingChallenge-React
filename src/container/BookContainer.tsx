@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import BookItem from "../component/BookItem";
 import { getBooks } from "../redux/actions/bookActions";
 
 interface Props {
@@ -19,11 +20,9 @@ const BookContainer = ({ match, getBooks, books, book }: Props) => {
     }
   }, [books]);
 
-  console.log(book)
-
   return (
     <>
-      Hello
+      <BookItem book={book} />
     </>
   );
 };
