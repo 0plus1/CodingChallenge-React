@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import Books from "../component/Books";
 import { getBooks, getBookSuccess } from "../redux/actions/bookActions";
 import { connect } from "react-redux";
 
@@ -25,10 +25,13 @@ const BooksContainer = ({ match, getBooks, books }: Props) => {
     }
   }, [books]);
 
-  console.log(books);
-
-  return <div style={HomeStyle}>Hello</div>;
+  return (
+    <div style={HomeStyle}>
+      <Books books={books} />
+    </div>
+  );
 };
+
 const mapStateToProps = (state: AppState) => {
   return {
     books: state.books
