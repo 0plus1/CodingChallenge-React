@@ -1,13 +1,12 @@
 /* eslint-disable import/no-unresolved */
 import { normalize, schema } from 'normalizr';
-import { defaultPhotoUrl } from 'utils/constants';
 
 // Define book items entity
 const bookItems = new schema.Entity('bookItems', {}, {
   idAttribute: 'book_id',
   processStrategy: item => Object.assign({
     id: item.book_id,
-    bookCover: item.cover || defaultPhotoUrl,
+    bookCover: item.cover,
     bookId: item.book_id,
     authorName: item.author,
     isbn: item.isbn,
