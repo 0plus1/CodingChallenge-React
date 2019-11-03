@@ -8,5 +8,4 @@ import homeReducer from 'containers/Home/reducer';
 
 export default combineReducers({
   home: homeReducer,
-  app: null,
 });

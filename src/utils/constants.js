@@ -3,4 +3,4 @@ export const APP_DEVELOPER = {
   link: 'https://tawan.me',
 };
 
-export const APP_NAME = 'Book Store';
+export const APP_NAME = 'Tim Tawan\'s Book Shop';

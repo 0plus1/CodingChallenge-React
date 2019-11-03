@@ -1,17 +1,21 @@
 /* eslint-disable import/no-unresolved */
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { createStructuredSelector } from 'reselect';
 import HomeView from 'views/Home';
 import {
-  fetchItems,
+  fetchItemsRequest,
 } from './actions';
+import {
+  makeSelectAllBooks,
+} from './selectors';
 
-// States
-const mapStateToProps = state => state;
+const mapStateToProps = createStructuredSelector({
+  allBooks: makeSelectAllBooks(),
+});
 
-// Props
 const mapDispatchToProps = dispatch => ({
-  fetchItems: () => dispatch(fetchItems),
+  fetchItems: () => dispatch(fetchItemsRequest()),
 });
 
 const withConnect = connect(

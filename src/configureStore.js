@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+
 /**
  * Create the store with dynamic reducers
  */
