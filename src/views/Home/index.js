@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ThemeStandard from 'themes/Standard';
 import BookItem from 'components/BookItem';
+import * as bookItemTypes from 'types/bookItem';
 
 class HomeView extends React.Component {
   componentDidMount() {
@@ -50,9 +51,7 @@ class HomeView extends React.Component {
 }
 HomeView.propTypes = {
   fetchItems: PropTypes.func,
-  allBooks: PropTypes.arrayOf(PropTypes.shape({
-    author: PropTypes.string,
-  })),
+  allBooks: PropTypes.arrayOf(PropTypes.shape(bookItemTypes.propTypes)),
 };
 
 HomeView.defaultProps = {

@@ -4,7 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import Home from 'containers/Home';
-import {BrowserRouter, Route} from 'react-router-dom';
+import BookDetail from 'containers/BookDetail';
+import { BrowserRouter, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import configureStore from './configureStore';
 import 'sanitize.css';
@@ -17,7 +18,8 @@ ReactDOM.render(
   // eslint-disable-next-line react/jsx-filename-extension
   <Provider store={store}>
     <BrowserRouter>
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/book/:id" component={BookDetail} />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root'),

@@ -1,9 +1,10 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import Image from 'components/Image';
+import * as bookItemTypes from 'types/bookItem';
 
-function BookItem({
+function BookItemDetail({
   bookId,
   bookCover,
   authorName,
@@ -12,46 +13,28 @@ function BookItem({
   publishedAt,
 }) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg" data-bookid={bookId}>
-      <img className="w-full" src={bookCover} alt={title} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <div className="text-gray-700 text-base">
-          <ul>
-            <li>{`Published At: ${publishedAt}`}</li>
-            <li>{`Author name: ${authorName}`}</li>
-            <li>{`ISBN: ${isbn}`}</li>
-          </ul>
+    <div className="md:flex bg-white rounded-lg p-6">
+      <Image className="h-16 w-16 md:h-24 md:w-24 rounded mx-auto md:mx-0 md:mr-6" src={bookCover} alt="" />
+      <div className="text-center md:text-left">
+        <h2 className="text-lg">{authorName}</h2>
+        <div className="text-purple-500">{title}</div>
+        <div className="text-gray-600">{`Published At: ${publishedAt}`}</div>
+        <div className="text-gray-600">{`Author name: ${authorName}`}</div>
+        <div className="text-gray-600">{`ISBN: ${isbn}`}</div>
+        <div className="py-4">
+          <a
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            href={`/book/${bookId}`}
+          >
+            Read more
+          </a>
         </div>
-      </div>
-      <div className="px-6 py-4">
-        <Link
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-          to="/"
-        >
-          Button
-        </Link>
       </div>
     </div>
   );
 }
 
-BookItem.propTypes = {
-  bookId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  bookCover: PropTypes.string,
-  authorName: PropTypes.string,
-  isbn: PropTypes.number,
-  title: PropTypes.string,
-  publishedAt: PropTypes.string,
-};
+BookItemDetail.propTypes = bookItemTypes.propTypes;
+BookItemDetail.defaultProps = bookItemTypes.defaultProps;
 
-BookItem.defaultProps = {
-  bookId: null,
-  bookCover: null,
-  authorName: null,
-  isbn: null,
-  title: null,
-  publishedAt: null,
-};
-
-export default BookItem;
+export default BookItemDetail;

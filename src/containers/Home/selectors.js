@@ -9,7 +9,7 @@ import toArray from 'lodash/toArray';
 import { initialState } from './reducer';
 
 // Select reducer domain
-const selectHome = state => state.home || initialState;
+export const selectHome = state => state.home || initialState;
 
 // Get data
 const getEntities = (state, keyItem) => get(state, `items.entities[${keyItem}]`);
