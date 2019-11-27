@@ -6,7 +6,8 @@ import Home from '../views/Home';
 describe('<Home />', () => {
   describe('renders', () => {
     it('without crashing', () => {
-      shallow(<Home />);
+      const route = { params: {testRouting: '' } };
+      shallow(<Home match={route} />);
     });
   });
 });
