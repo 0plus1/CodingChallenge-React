@@ -6,20 +6,20 @@ import BookResult from '../../components/BookResult';
 const books = [
   {
     bookId: 1,
-    name: "Becker West Arnoldo",
-    isbn: "3181444340",
-    publishedAt: "2000-01-01",
-    author: "Mrs. John Doe",
-    cover: "https:\/\/lorempixel.com\/640\/480\/?82539",
+    name: 'Becker West Arnoldo',
+    isbn: '3181444340',
+    publishedAt: '2000-01-01',
+    author: 'Mrs. John Doe',
+    cover: 'https://lorempixel.com/640/480/?82539',
   },
   {
     bookId: 2,
-    name: "Schuster Champlinborough",
-    isbn: "1441614311",
-    publishedAt: "1991-07-29",
-    author: "Prof. John Doe",
-    cover: "https:\/\/lorempixel.com\/640\/480\/?84662",
-  }
+    name: 'Schuster Champlinborough',
+    isbn: '1441614311',
+    publishedAt: '1991-07-29',
+    author: 'Prof. John Doe',
+    cover: 'https://lorempixel.com/640/480/?84662',
+  },
 ];
 
 describe('<BookResults />', () => {
@@ -30,9 +30,11 @@ describe('<BookResults />', () => {
   it('renders with correct n children', () => {
     const wrapper = mount(<BookResults books={books} />);
     const bookChild = wrapper.find(BookResult);
-    expect(bookChild.length).toEqual((books.length));
+    expect(bookChild.length)
+      .toEqual((books.length));
     bookChild.forEach((child, index) => {
-      expect(child.props()).toMatchObject(books[index])
+      expect(child.props())
+        .toMatchObject(books[index]);
     });
     wrapper.unmount();
   });

@@ -1,13 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from '@material-ui/core';
+import { Container, AppBar, Toolbar, Typography } from '@material-ui/core';
+import styled from 'styled-components';
+
+const StyledContainer = styled(Container)`
+  margin-top: 2em;
+`;
 
 const Layout = WrappedComponent => class extends React.PureComponent {
   render() {
     return (
-        <Container id="body" maxWidth="lg">
+      <React.Fragment>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6">
+              Book Finder
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <StyledContainer id="body" maxWidth="lg">
           <WrappedComponent {...this.props} />
-        </Container>
+        </StyledContainer>
+      </React.Fragment>
     );
   }
 };

@@ -4,7 +4,6 @@ import Layout from '../views/Layout';
 
 describe('<Layout />', () => {
   describe('renders', () => {
-
     it('without crashing', () => {
       shallow(<Layout />);
       expect(<Layout />).toMatchSnapshot();

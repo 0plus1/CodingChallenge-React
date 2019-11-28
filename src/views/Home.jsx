@@ -6,12 +6,6 @@ import axios from 'axios';
 import BookResults from "../components/BookResults";
 import camelcaseKeys from 'camelcase-keys';
 
-const HomeStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
-
 const loadBooks = () => axios.get('https://my-json-server.typicode.com/0plus1/CodingChallenge-react/books')
     .then((response) => {
         return {
@@ -24,16 +18,13 @@ const Home = () => {
   const state = useAsync({ promiseFn: loadBooks });
 
   return (
-      <div style={HomeStyle}>
-        <h1>
-          Welcome!
-        </h1>
+      <React.Fragment>
         <IfPending state={state}>Loading...</IfPending>
         <IfRejected state={state}>{error => `Something went wrong: ${error.message}`}</IfRejected>
         <IfFulfilled state={state}>
           {({data}) => <BookResults books={data}/>}
         </IfFulfilled>
-      </div>
+      </React.Fragment>
   );
 };
 
