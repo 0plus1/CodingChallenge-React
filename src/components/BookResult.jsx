@@ -21,7 +21,7 @@ const StyledCardMedia = styled(CardMedia)`
 `;
 
 const BookResult = ({ bookId, name, isbn, publishedAt, cover, author }) => (
-  <StyledLink to={`/books/${bookId}`}>
+  <StyledLink to={`/book/${bookId}`}>
     <StyledCard aria-label={name}>
       <CardActionArea>
         <CardHeader

@@ -12,7 +12,7 @@ const Routes = () => (
   <Router history={createBrowserHistory()}>
     <Switch>
       <Route exact path="/" component={Search} />
-      <Route exact path="/books/:bookId" component={Book} />
+      <Route exact path="/book/:bookId" component={Book} />
     </Switch>
   </Router>
 );
