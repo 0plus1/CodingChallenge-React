@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookResults /> renders without crashing 1`] = `
+<BookResults
+  books={
+    Array [
+      Object {
+        "author": "Mrs. John Doe",
+        "bookId": 1,
+        "cover": "https://lorempixel.com/640/480/?82539",
+        "isbn": "3181444340",
+        "name": "Becker West Arnoldo",
+        "publishedAt": "2000-01-01",
+      },
+      Object {
+        "author": "Prof. John Doe",
+        "bookId": 2,
+        "cover": "https://lorempixel.com/640/480/?84662",
+        "isbn": "1441614311",
+        "name": "Schuster Champlinborough",
+        "publishedAt": "1991-07-29",
+      },
+    ]
+  }
+/>
+`;

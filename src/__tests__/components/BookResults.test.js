@@ -25,6 +25,8 @@ const books = [
 describe('<BookResults />', () => {
   it('renders without crashing', () => {
     shallow(<BookResults books={books} />);
+
+    expect(<BookResults books={books}/>).toMatchSnapshot();
   });
 
   it('renders with correct n children', () => {

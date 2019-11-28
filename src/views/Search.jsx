@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { loadBooks } from '../actions/bookActions';
 
-const Home = ({ books, dispatch }) => {
+const Search = ({ books, dispatch }) => {
   useEffect(() => {
     dispatch(loadBooks());
   }, [dispatch]);
@@ -20,7 +20,7 @@ const Home = ({ books, dispatch }) => {
   );
 };
 
-Home.propTypes = {
+Search.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       testRouting: PropTypes.string.isRequired,
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default Layout(connect(mapStateToProps)(Home));
+export default Layout(connect(mapStateToProps)(Search));

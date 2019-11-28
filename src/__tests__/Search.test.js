@@ -1,12 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Home from '../views/Home';
+import Search from '../views/Search';
 
 describe('<Home />', () => {
   describe('renders', () => {
     it('without crashing', () => {
       const route = { params: { testRouting: '' } };
-      shallow(<Home match={route} />);
+      shallow(<Search match={route} />);
+
+      expect(<Search />).toMatchSnapshot();
     });
   });
 });
