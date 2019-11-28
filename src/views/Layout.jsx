@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core';
 const Layout = WrappedComponent => class extends React.PureComponent {
   render() {
     return (
-        <Container id="body">
+        <Container id="body" maxWidth="lg">
           <WrappedComponent {...this.props} />
         </Container>
     );

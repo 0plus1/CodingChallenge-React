@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Layout from "./Layout";
 
 const HomeStyle = {
   display: 'flex',
@@ -28,4 +29,4 @@ Home.propTypes = {
   }).isRequired,
 };
 
-export default Home;
+export default Layout(Home);
