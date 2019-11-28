@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loadBooks } from '../actions/bookActions';
 import { BookResult, Loading, Layout } from '../components';
+import { bindActionCreators } from 'redux';
 
-const BookView = ({ book, books, dispatch }) => {
+const BookView = ({ book, books, loadBooks }) => {
   // if the route is accessed directly there will be no book to find - so go fetch
   useEffect(() => {
     if (books.length < 1) {
-      dispatch(loadBooks());
+      loadBooks();
     }
-  }, [dispatch, books]);
+  }, [loadBooks, books]);
 
   return book ? <BookResult {...book} /> : <Loading />;
 };
@@ -29,4 +30,8 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default Layout(connect(mapStateToProps)(BookView));
+const mapDispatchToProps = dispatch => bindActionCreators({
+  loadBooks
+}, dispatch);
+
+export default Layout(connect(mapStateToProps, mapDispatchToProps)(BookView));
