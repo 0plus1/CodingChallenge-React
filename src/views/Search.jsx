@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loadBooks } from '../actions/bookActions';
 import { BookResults, Loading, Layout } from '../components';
-import {bindActionCreators} from "redux"
+import { bindActionCreators } from 'redux';
 
 const Search = ({ books, loadBooks }) => {
-  // if the route is accessed directly there will be no book to find - so go fetch
   useEffect(() => {
     if (books.length < 1) {
       loadBooks();
     }
   }, [loadBooks, books]);
 
-  let render = books.length ? <BookResults books={books}/> : <Loading />;
+  let render = books.length ? <BookResults books={books}/> : <Loading/>;
 
   return (
     <React.Fragment>
@@ -27,9 +26,9 @@ Search.propTypes = {
   loadBooks: PropTypes.func
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ books: { books } }) => {
   return {
-    books: state.books,
+    books
   };
 };
 
