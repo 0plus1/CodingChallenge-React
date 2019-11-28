@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardHeader, CardMedia, CardContent, Avatar, Typography } from '@material-ui/core';
+import styled from 'styled-components';
+
+const StyledCardMedia = styled(CardMedia)`
+    height: 200px;
+`;
+const StyledAuthor = styled.p``;
+const StyledISBN = styled.p``;
 
 const BookResult = (props) => {
     const { name, isbn, publishedAt, cover, author } = props;
@@ -11,15 +18,14 @@ const BookResult = (props) => {
                 title={name}
                 subheader={publishedAt}
             />
-            <CardMedia
+            <StyledCardMedia
                 image={cover}
                 title={name}
-                style={{height: '200px'}}
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    {author}
-                    {isbn}
+                <Typography variant="body2" color="textSecondary" component="div">
+                    <StyledAuthor><strong>Author</strong> {author}</StyledAuthor>
+                    <StyledISBN><strong>ISBN</strong> {isbn}</StyledISBN>
                 </Typography>
             </CardContent>
         </Card>
