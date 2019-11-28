@@ -13,7 +13,7 @@ ReactDOM.render(
   // TODO use jsx extension for this file, will require to eject the create-react-app
   // eslint-disable-next-line react/jsx-filename-extension
   <Provider store={store}>
-    <Routes/>
+    <Routes />
   </Provider>,
   document.getElementById('root'),
 );

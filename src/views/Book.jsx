@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import BookResult from '../components/BookResult';
-import Layout from './Layout';
 import { connect } from 'react-redux';
 import { loadBooks } from '../actions/bookActions';
+import BookResult from '../components/BookResult';
+import Layout from './Layout';
 import Loading from './Loading';
 
 const BookView = ({ book, books, dispatch }) => {
-
   // if the route is accessed directly there will be no book to find - so go fetch
   useEffect(() => {
     if (books.length < 1) {
@@ -15,8 +14,7 @@ const BookView = ({ book, books, dispatch }) => {
     }
   }, [dispatch, books]);
 
-  const render = book ? <BookResult {...book} /> : <Loading />;
-  return render;
+  return book ? <BookResult {...book} /> : <Loading />;
 };
 
 BookView.propTypes = {
@@ -27,11 +25,11 @@ const mapStateToProps = (state, ownProps) => {
   const { bookId } = ownProps.match.params;
   const foundBook = state.books.find(book => book.bookId === parseInt(bookId, 10));
 
-  let book = foundBook ? { ...foundBook } : null;
+  const book = foundBook ? { ...foundBook } : null;
 
   return {
     book,
-    books: state.books
+    books: state.books,
   };
 };
 
