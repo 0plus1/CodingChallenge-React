@@ -1,0 +1,366 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookResult /> renders without crashing 1`] = `
+.c0 {
+  height: 200px;
+}
+
+<WithStyles(ForwardRef(Card))
+  aria-label="test book"
+>
+  <ForwardRef(Card)
+    aria-label="test book"
+    classes={
+      Object {
+        "root": "MuiCard-root",
+      }
+    }
+  >
+    <WithStyles(ForwardRef(Paper))
+      aria-label="test book"
+      className="MuiCard-root"
+      elevation={1}
+    >
+      <ForwardRef(Paper)
+        aria-label="test book"
+        className="MuiCard-root"
+        classes={
+          Object {
+            "elevation0": "MuiPaper-elevation0",
+            "elevation1": "MuiPaper-elevation1",
+            "elevation10": "MuiPaper-elevation10",
+            "elevation11": "MuiPaper-elevation11",
+            "elevation12": "MuiPaper-elevation12",
+            "elevation13": "MuiPaper-elevation13",
+            "elevation14": "MuiPaper-elevation14",
+            "elevation15": "MuiPaper-elevation15",
+            "elevation16": "MuiPaper-elevation16",
+            "elevation17": "MuiPaper-elevation17",
+            "elevation18": "MuiPaper-elevation18",
+            "elevation19": "MuiPaper-elevation19",
+            "elevation2": "MuiPaper-elevation2",
+            "elevation20": "MuiPaper-elevation20",
+            "elevation21": "MuiPaper-elevation21",
+            "elevation22": "MuiPaper-elevation22",
+            "elevation23": "MuiPaper-elevation23",
+            "elevation24": "MuiPaper-elevation24",
+            "elevation3": "MuiPaper-elevation3",
+            "elevation4": "MuiPaper-elevation4",
+            "elevation5": "MuiPaper-elevation5",
+            "elevation6": "MuiPaper-elevation6",
+            "elevation7": "MuiPaper-elevation7",
+            "elevation8": "MuiPaper-elevation8",
+            "elevation9": "MuiPaper-elevation9",
+            "root": "MuiPaper-root",
+            "rounded": "MuiPaper-rounded",
+          }
+        }
+        elevation={1}
+      >
+        <div
+          aria-label="test book"
+          className="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+        >
+          <WithStyles(ForwardRef(CardHeader))
+            avatar={
+              <ForwardRef(WithStyles)
+                aria-label="book"
+              >
+                B
+              </ForwardRef(WithStyles)>
+            }
+            subheader="2019-12-23"
+            title="test book"
+          >
+            <ForwardRef(CardHeader)
+              avatar={
+                <ForwardRef(WithStyles)
+                  aria-label="book"
+                >
+                  B
+                </ForwardRef(WithStyles)>
+              }
+              classes={
+                Object {
+                  "action": "MuiCardHeader-action",
+                  "avatar": "MuiCardHeader-avatar",
+                  "content": "MuiCardHeader-content",
+                  "root": "MuiCardHeader-root",
+                  "subheader": "MuiCardHeader-subheader",
+                  "title": "MuiCardHeader-title",
+                }
+              }
+              subheader="2019-12-23"
+              title="test book"
+            >
+              <div
+                className="MuiCardHeader-root"
+              >
+                <div
+                  className="MuiCardHeader-avatar"
+                >
+                  <WithStyles(ForwardRef(Avatar))
+                    aria-label="book"
+                  >
+                    <ForwardRef(Avatar)
+                      aria-label="book"
+                      classes={
+                        Object {
+                          "circle": "MuiAvatar-circle",
+                          "colorDefault": "MuiAvatar-colorDefault",
+                          "img": "MuiAvatar-img",
+                          "root": "MuiAvatar-root",
+                          "rounded": "MuiAvatar-rounded",
+                          "square": "MuiAvatar-square",
+                        }
+                      }
+                    >
+                      <div
+                        aria-label="book"
+                        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+                      >
+                        B
+                      </div>
+                    </ForwardRef(Avatar)>
+                  </WithStyles(ForwardRef(Avatar))>
+                </div>
+                <div
+                  className="MuiCardHeader-content"
+                >
+                  <WithStyles(ForwardRef(Typography))
+                    className="MuiCardHeader-title"
+                    component="span"
+                    display="block"
+                    variant="body2"
+                  >
+                    <ForwardRef(Typography)
+                      className="MuiCardHeader-title"
+                      classes={
+                        Object {
+                          "alignCenter": "MuiTypography-alignCenter",
+                          "alignJustify": "MuiTypography-alignJustify",
+                          "alignLeft": "MuiTypography-alignLeft",
+                          "alignRight": "MuiTypography-alignRight",
+                          "body1": "MuiTypography-body1",
+                          "body2": "MuiTypography-body2",
+                          "button": "MuiTypography-button",
+                          "caption": "MuiTypography-caption",
+                          "colorError": "MuiTypography-colorError",
+                          "colorInherit": "MuiTypography-colorInherit",
+                          "colorPrimary": "MuiTypography-colorPrimary",
+                          "colorSecondary": "MuiTypography-colorSecondary",
+                          "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                          "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                          "displayBlock": "MuiTypography-displayBlock",
+                          "displayInline": "MuiTypography-displayInline",
+                          "gutterBottom": "MuiTypography-gutterBottom",
+                          "h1": "MuiTypography-h1",
+                          "h2": "MuiTypography-h2",
+                          "h3": "MuiTypography-h3",
+                          "h4": "MuiTypography-h4",
+                          "h5": "MuiTypography-h5",
+                          "h6": "MuiTypography-h6",
+                          "noWrap": "MuiTypography-noWrap",
+                          "overline": "MuiTypography-overline",
+                          "paragraph": "MuiTypography-paragraph",
+                          "root": "MuiTypography-root",
+                          "srOnly": "MuiTypography-srOnly",
+                          "subtitle1": "MuiTypography-subtitle1",
+                          "subtitle2": "MuiTypography-subtitle2",
+                        }
+                      }
+                      component="span"
+                      display="block"
+                      variant="body2"
+                    >
+                      <span
+                        className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+                      >
+                        test book
+                      </span>
+                    </ForwardRef(Typography)>
+                  </WithStyles(ForwardRef(Typography))>
+                  <WithStyles(ForwardRef(Typography))
+                    className="MuiCardHeader-subheader"
+                    color="textSecondary"
+                    component="span"
+                    display="block"
+                    variant="body2"
+                  >
+                    <ForwardRef(Typography)
+                      className="MuiCardHeader-subheader"
+                      classes={
+                        Object {
+                          "alignCenter": "MuiTypography-alignCenter",
+                          "alignJustify": "MuiTypography-alignJustify",
+                          "alignLeft": "MuiTypography-alignLeft",
+                          "alignRight": "MuiTypography-alignRight",
+                          "body1": "MuiTypography-body1",
+                          "body2": "MuiTypography-body2",
+                          "button": "MuiTypography-button",
+                          "caption": "MuiTypography-caption",
+                          "colorError": "MuiTypography-colorError",
+                          "colorInherit": "MuiTypography-colorInherit",
+                          "colorPrimary": "MuiTypography-colorPrimary",
+                          "colorSecondary": "MuiTypography-colorSecondary",
+                          "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                          "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                          "displayBlock": "MuiTypography-displayBlock",
+                          "displayInline": "MuiTypography-displayInline",
+                          "gutterBottom": "MuiTypography-gutterBottom",
+                          "h1": "MuiTypography-h1",
+                          "h2": "MuiTypography-h2",
+                          "h3": "MuiTypography-h3",
+                          "h4": "MuiTypography-h4",
+                          "h5": "MuiTypography-h5",
+                          "h6": "MuiTypography-h6",
+                          "noWrap": "MuiTypography-noWrap",
+                          "overline": "MuiTypography-overline",
+                          "paragraph": "MuiTypography-paragraph",
+                          "root": "MuiTypography-root",
+                          "srOnly": "MuiTypography-srOnly",
+                          "subtitle1": "MuiTypography-subtitle1",
+                          "subtitle2": "MuiTypography-subtitle2",
+                        }
+                      }
+                      color="textSecondary"
+                      component="span"
+                      display="block"
+                      variant="body2"
+                    >
+                      <span
+                        className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                      >
+                        2019-12-23
+                      </span>
+                    </ForwardRef(Typography)>
+                  </WithStyles(ForwardRef(Typography))>
+                </div>
+              </div>
+            </ForwardRef(CardHeader)>
+          </WithStyles(ForwardRef(CardHeader))>
+          <Styled(WithStyles(ForwardRef(CardMedia)))
+            image="/path/to/image"
+            title="test book"
+          >
+            <WithStyles(ForwardRef(CardMedia))
+              className="c0"
+              image="/path/to/image"
+              title="test book"
+            >
+              <ForwardRef(CardMedia)
+                className="c0"
+                classes={
+                  Object {
+                    "img": "MuiCardMedia-img",
+                    "media": "MuiCardMedia-media",
+                    "root": "MuiCardMedia-root",
+                  }
+                }
+                image="/path/to/image"
+                title="test book"
+              >
+                <div
+                  className="MuiCardMedia-root c0"
+                  style={
+                    Object {
+                      "backgroundImage": "url(\\"/path/to/image\\")",
+                    }
+                  }
+                  title="test book"
+                />
+              </ForwardRef(CardMedia)>
+            </WithStyles(ForwardRef(CardMedia))>
+          </Styled(WithStyles(ForwardRef(CardMedia)))>
+          <WithStyles(ForwardRef(CardContent))>
+            <ForwardRef(CardContent)
+              classes={
+                Object {
+                  "root": "MuiCardContent-root",
+                }
+              }
+            >
+              <div
+                className="MuiCardContent-root"
+              >
+                <WithStyles(ForwardRef(Typography))
+                  color="textSecondary"
+                  component="div"
+                  variant="body2"
+                >
+                  <ForwardRef(Typography)
+                    classes={
+                      Object {
+                        "alignCenter": "MuiTypography-alignCenter",
+                        "alignJustify": "MuiTypography-alignJustify",
+                        "alignLeft": "MuiTypography-alignLeft",
+                        "alignRight": "MuiTypography-alignRight",
+                        "body1": "MuiTypography-body1",
+                        "body2": "MuiTypography-body2",
+                        "button": "MuiTypography-button",
+                        "caption": "MuiTypography-caption",
+                        "colorError": "MuiTypography-colorError",
+                        "colorInherit": "MuiTypography-colorInherit",
+                        "colorPrimary": "MuiTypography-colorPrimary",
+                        "colorSecondary": "MuiTypography-colorSecondary",
+                        "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                        "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                        "displayBlock": "MuiTypography-displayBlock",
+                        "displayInline": "MuiTypography-displayInline",
+                        "gutterBottom": "MuiTypography-gutterBottom",
+                        "h1": "MuiTypography-h1",
+                        "h2": "MuiTypography-h2",
+                        "h3": "MuiTypography-h3",
+                        "h4": "MuiTypography-h4",
+                        "h5": "MuiTypography-h5",
+                        "h6": "MuiTypography-h6",
+                        "noWrap": "MuiTypography-noWrap",
+                        "overline": "MuiTypography-overline",
+                        "paragraph": "MuiTypography-paragraph",
+                        "root": "MuiTypography-root",
+                        "srOnly": "MuiTypography-srOnly",
+                        "subtitle1": "MuiTypography-subtitle1",
+                        "subtitle2": "MuiTypography-subtitle2",
+                      }
+                    }
+                    color="textSecondary"
+                    component="div"
+                    variant="body2"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                    >
+                      <styled.p>
+                        <p
+                          className=""
+                        >
+                          <strong>
+                            Author
+                          </strong>
+                           
+                          I wrote it
+                        </p>
+                      </styled.p>
+                      <styled.p>
+                        <p
+                          className=""
+                        >
+                          <strong>
+                            ISBN
+                          </strong>
+                           
+                          23421423
+                        </p>
+                      </styled.p>
+                    </div>
+                  </ForwardRef(Typography)>
+                </WithStyles(ForwardRef(Typography))>
+              </div>
+            </ForwardRef(CardContent)>
+          </WithStyles(ForwardRef(CardContent))>
+        </div>
+      </ForwardRef(Paper)>
+    </WithStyles(ForwardRef(Paper))>
+  </ForwardRef(Card)>
+</WithStyles(ForwardRef(Card))>
+`;

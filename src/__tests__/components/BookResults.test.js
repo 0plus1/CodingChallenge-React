@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-
 import BookResults from '../../components/BookResults';
 import BookResult from '../../components/BookResult';
 
@@ -30,7 +29,11 @@ describe('<BookResults />', () => {
 
   it('renders with correct n children', () => {
     const wrapper = mount(<BookResults books={books} />);
-    expect(wrapper.find(BookResult)).toHaveLength(2);
+    const bookChild = wrapper.find(BookResult);
+    expect(bookChild.length).toEqual((books.length));
+    bookChild.forEach((child, index) => {
+      expect(child.props()).toMatchObject(books[index])
+    });
     wrapper.unmount();
   });
 });

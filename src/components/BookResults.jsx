@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BookResult, { BookResultPropType } from './BookResult';
+import BookResult from './BookResult';
 
 const BookResults = ({ books }) => (
   <div>
@@ -9,7 +9,7 @@ const BookResults = ({ books }) => (
 );
 
 BookResults.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.shape(BookResultPropType)).isRequired,
+  books: PropTypes.arrayOf(PropTypes.shape(BookResult.propTypes)).isRequired,
 };
 
 export default BookResults;
