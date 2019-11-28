@@ -5,13 +5,14 @@ import BookResults from '../components/BookResults';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { loadBooks } from '../actions/bookActions';
+import Loading from './Loading';
 
 const Search = ({ books, dispatch }) => {
   useEffect(() => {
     dispatch(loadBooks());
   }, [dispatch]);
 
-  let render = books.length ? <BookResults books={books}/> : <p>Loading</p>;
+  let render = books.length ? <BookResults books={books}/> : <Loading />;
 
   return (
     <React.Fragment>
@@ -21,11 +22,6 @@ const Search = ({ books, dispatch }) => {
 };
 
 Search.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      testRouting: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
