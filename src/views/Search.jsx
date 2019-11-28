@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Layout from './Layout';
-import BookResults from '../components/BookResults';
-import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { loadBooks } from '../actions/bookActions';
-import Loading from './Loading';
+import { BookResults, Loading, Layout } from '../components';
 
 const Search = ({ books, dispatch }) => {
   // if the route is accessed directly there will be no book to find - so go fetch

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, AppBar, Toolbar, Typography, Button } from '@material-ui/core';
 import styled from 'styled-components';
-import StyledLink from '../components/StyledLink';
+import { StyledLink } from './index';
 
 const StyledContainer = styled(Container)`
   margin-top: 2em;

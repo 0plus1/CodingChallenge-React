@@ -1,7 +1,7 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import { Card } from '@material-ui/core';
-import BookResult from '../../components/BookResult';
+import { BookResult } from '../../components';
+import { mountWithRouter } from '../../testHelper';
 
 const book = {
   bookId: 1,
@@ -14,13 +14,13 @@ const book = {
 
 describe('<BookResult />', () => {
   it('renders without crashing', () => {
-    const wrapper = mount(<BookResult {...book} />);
+    const wrapper = mountWithRouter(<BookResult {...book} />);
     expect(wrapper)
       .toMatchSnapshot();
   });
 
-  it('renders with props', () => {
-    const wrapper = mount(<BookResult {...book} />);
+  it('renders aria label with name', () => {
+    const wrapper = mountWithRouter(<BookResult {...book} />);
 
     // confirm that the aria-label is set with the book name
     expect(wrapper.find(Card)

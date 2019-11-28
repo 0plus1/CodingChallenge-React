@@ -10,7 +10,7 @@ import {
   CardActionArea
 } from '@material-ui/core';
 import styled from 'styled-components';
-import StyledLink from './StyledLink';
+import { StyledLink } from './index';
 
 const StyledCard = styled(Card)`
   min-width: 288px;
@@ -19,9 +19,6 @@ const StyledCard = styled(Card)`
 const StyledCardMedia = styled(CardMedia)`
   height: 200px;
 `;
-
-const StyledAuthor = styled.p``;
-const StyledISBN = styled.p``;
 
 const BookResult = ({ bookId, name, isbn, publishedAt, cover, author }) => (
   <StyledLink to={`/books/${bookId}`}>
@@ -38,8 +35,8 @@ const BookResult = ({ bookId, name, isbn, publishedAt, cover, author }) => (
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="div">
-            <StyledAuthor><strong>Author</strong> {author}</StyledAuthor>
-            <StyledISBN><strong>ISBN</strong> {isbn}</StyledISBN>
+            <p><strong>Author</strong> {author}</p>
+            <p><strong>ISBN</strong> {isbn}</p>
           </Typography>
         </CardContent>
       </CardActionArea>

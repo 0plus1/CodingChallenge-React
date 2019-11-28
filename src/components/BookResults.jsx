@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
-import BookResult from './BookResult';
+import { BookResult } from './index';
 
 const BookResults = ({ books }) => (
   <Grid container direction={'row'} justify={'center'} alignItems={'center'} spacing={4}>

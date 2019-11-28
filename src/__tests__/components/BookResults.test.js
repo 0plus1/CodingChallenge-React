@@ -1,7 +1,9 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
 import BookResults from '../../components/BookResults';
 import BookResult from '../../components/BookResult';
+import { mountWithRouter, shallowWithRouter} from '../../testHelper';
+import mockAxios from 'axios';
+import bookApi from '../../api/books';
 
 const books = [
   {
@@ -24,15 +26,23 @@ const books = [
 
 describe('<BookResults />', () => {
   it('renders without crashing', () => {
-    shallow(<BookResults books={books} />);
+    shallowWithRouter(<BookResults books={books} />);
 
     expect(<BookResults books={books} />)
       .toMatchSnapshot();
   });
 
-  it('renders with correct n children', () => {
-    const wrapper = mount(<BookResults books={books} />);
+  it('renders with correct n children', async () => {
+    const wrapper = mountWithRouter(<BookResults books={books} />);
     const bookChild = wrapper.find(BookResult);
+
+    mockAxios.get.mockImplementationOnce(() => Promise.resolve({
+        data: books
+      })
+    );
+
+    await bookApi.getBooks();
+
     expect(bookChild.length)
       .toEqual((books.length));
     bookChild.forEach((child, index) => {
