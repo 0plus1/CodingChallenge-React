@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loadBook } from '../actions/bookActions';
-import { BookResult, Loading, Layout } from '../components';
+import BookResult from '../components/BookResult';
+import Loading from '../components/Loading';
+import Layout from '../components/Layout';
 import { bindActionCreators } from 'redux';
 
 const BookView = ({ book, loadBook, match }) => {

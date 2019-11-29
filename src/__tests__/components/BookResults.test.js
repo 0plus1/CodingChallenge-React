@@ -1,9 +1,9 @@
 import React from 'react';
+import mockAxios from 'axios';
 import BookResults from '../../components/BookResults';
 import BookResult from '../../components/BookResult';
-import { mountWithRouter, shallowWithRouter} from '../../testHelper';
-import mockAxios from 'axios';
-import bookApi from '../../api/books';
+import { mountWithRouter, shallowWithRouter } from '../../testHelper';
+import { getBooks } from '../../api/books';
 
 const books = [
   {
@@ -37,11 +37,10 @@ describe('<BookResults />', () => {
     const bookChild = wrapper.find(BookResult);
 
     mockAxios.get.mockImplementationOnce(() => Promise.resolve({
-        data: books
-      })
-    );
+      data: books,
+    }));
 
-    await bookApi.getBooks();
+    await getBooks();
 
     expect(bookChild.length)
       .toEqual((books.length));

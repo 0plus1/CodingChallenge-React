@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '@material-ui/core';
-import { BookResult } from '../../components';
+import BookResult from '../../components/BookResult';
 import { mountWithRouter } from '../../testHelper';
 
 const book = {

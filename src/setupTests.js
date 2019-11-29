@@ -1,8 +1,9 @@
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import 'jest-extended';
 import 'jest-styled-components/serializer';
 import { createSerializer } from 'enzyme-to-json';
-import React from "react";
+import React from 'react';
 
 configure({ adapter: new Adapter() });
 

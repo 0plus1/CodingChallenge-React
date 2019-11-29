@@ -2,11 +2,11 @@
 
 exports[`<BookResult /> renders without crashing 1`] = `
 <Styled(Link)
-  to="/books/1"
+  to="/book/1"
 >
   <a
-    className="sc-htpNat eRnsqc"
-    href="/books/1"
+    className="sc-bdVaJa hIPFaS"
+    href="/book/1"
     onClick={[Function]}
   >
     <Styled(WithStyles(ForwardRef(Card)))
@@ -14,11 +14,11 @@ exports[`<BookResult /> renders without crashing 1`] = `
     >
       <WithStyles(ForwardRef(Card))
         aria-label="test book"
-        className="sc-bdVaJa lpuheD"
+        className="sc-bwzfXH jSDcnc"
       >
         <ForwardRef(Card)
           aria-label="test book"
-          className="sc-bdVaJa lpuheD"
+          className="sc-bwzfXH jSDcnc"
           classes={
             Object {
               "root": "MuiCard-root",
@@ -27,12 +27,12 @@ exports[`<BookResult /> renders without crashing 1`] = `
         >
           <WithStyles(ForwardRef(Paper))
             aria-label="test book"
-            className="MuiCard-root sc-bdVaJa lpuheD"
+            className="MuiCard-root sc-bwzfXH jSDcnc"
             elevation={1}
           >
             <ForwardRef(Paper)
               aria-label="test book"
-              className="MuiCard-root sc-bdVaJa lpuheD"
+              className="MuiCard-root sc-bwzfXH jSDcnc"
               classes={
                 Object {
                   "elevation0": "MuiPaper-elevation0",
@@ -68,7 +68,7 @@ exports[`<BookResult /> renders without crashing 1`] = `
             >
               <div
                 aria-label="test book"
-                className="MuiPaper-root MuiPaper-elevation1 MuiCard-root sc-bdVaJa lpuheD MuiPaper-rounded"
+                className="MuiPaper-root MuiPaper-elevation1 MuiCard-root sc-bwzfXH jSDcnc MuiPaper-rounded"
               >
                 <WithStyles(ForwardRef(CardActionArea))>
                   <ForwardRef(CardActionArea)
@@ -295,12 +295,12 @@ exports[`<BookResult /> renders without crashing 1`] = `
                             title="test book"
                           >
                             <WithStyles(ForwardRef(CardMedia))
-                              className="sc-bwzfXH iVihwz"
+                              className="sc-htpNat dPaevf"
                               image="/path/to/image"
                               title="test book"
                             >
                               <ForwardRef(CardMedia)
-                                className="sc-bwzfXH iVihwz"
+                                className="sc-htpNat dPaevf"
                                 classes={
                                   Object {
                                     "img": "MuiCardMedia-img",
@@ -312,7 +312,7 @@ exports[`<BookResult /> renders without crashing 1`] = `
                                 title="test book"
                               >
                                 <div
-                                  className="MuiCardMedia-root sc-bwzfXH iVihwz"
+                                  className="MuiCardMedia-root sc-htpNat dPaevf"
                                   style={
                                     Object {
                                       "backgroundImage": "url(\\"/path/to/image\\")",

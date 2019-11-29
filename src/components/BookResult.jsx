@@ -10,7 +10,7 @@ import {
   CardActionArea
 } from '@material-ui/core';
 import styled from 'styled-components';
-import { StyledLink } from './index';
+import StyledLink from './StyledLink';
 
 const StyledCard = styled(Card)`
   min-width: 288px;

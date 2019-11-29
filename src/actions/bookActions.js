@@ -1,4 +1,4 @@
-import bookApi from '../api/books';
+import { getBooks, getBook } from '../api/books';
 import { LOAD_BOOKS_SUCCESS, LOAD_BOOK_SUCCESS } from './types';
 
 export function loadBooksSuccess(books) {
@@ -16,7 +16,7 @@ export function loadBookSuccess(book) {
 }
 
 export function loadBooks() {
-  return dispatch => bookApi.getBooks()
+  return dispatch => getBooks()
     .then((response) => {
       dispatch(loadBooksSuccess(response.data));
     })
@@ -26,7 +26,7 @@ export function loadBooks() {
 }
 
 export function loadBook(bookId) {
-  return dispatch => bookApi.getBook(bookId)
+  return dispatch => getBook(bookId)
     .then((book) => {
       dispatch(loadBookSuccess(book));
     })

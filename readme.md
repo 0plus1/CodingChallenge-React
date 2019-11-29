@@ -1,74 +1,24 @@
-## Coding Challenge
-###### React
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/adac75195f2a465c92137cea62a924af)](https://www.codacy.com/app/0plus1/CodingChallenge-React?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=0plus1/CodingChallenge-React&amp;utm_campaign=Badge_Grade)
+# Coding Challenge
 
-This coding challenge has been created to evaluate the skills of a React developer.
-There is no right way to solve the challenge, best practices and understanding will emerge organically.
+You can visit the app in action using [an AWS amplify build](https://master.d13e7ha1ljw5o3.amplifyapp.com/)
 
-### Challenge
+There has been no change to the package scripts except the addition of `yarn lint`
 
-Fork this repository and create a pull request when the challenge is complete.
+## Assumptions and Approach
+1. Book detail view uses the same data set as the list view
+2. I chose MaterialUI to expedite the development of the UI. This resulted in fewer demonstrations of StyledComponent capabilities of which I am well versed
+3. I followed the stubbed structure for tests in this challenge but I prefer keeping tests in the same directory to what they are testing
+4. Didn't worry about ServerSide rendering
 
-The test is tiered with an increasingly difficult set of requirements. **Only the first tier is required** but solving all the tiers is encouraged.
+## Limitations
+1. Not enough test coverage
+2. No error boundary page
+3. The user experience around failure scenarios should be addressed
+4. Interoperability between MaterialUI and StyledComponents could be improved
 
-Sourcecode must fully adhere to the [AirBnB](https://github.com/airbnb/javascript) style guide, no disabled rules.
-
-#### Tier one.
-
-You are given a [URL](https://my-json-server.typicode.com/0plus1/CodingChallenge-react/books) which returns the JSON defined in the db.json file at the root of this project.
-Perform a GET to retrieve the data and render the result on the page however you see fit.
-
-Bonus points are awarded for (in order of importance):
-
-* [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
-* Using a HOC as the main page layout
-* Unit testing using [enzyme](https://airbnb.io/enzyme/)
-* [💅](https://www.styled-components.com/)
-* Using [axios](https://github.com/axios/axios) for the API call
-
-#### Tier two.
-
-Perform the same task of tier one using Redux.
-
-
-#### Tier three.
-
-Using Redux and React router, create a new url (_/book/{id}_) which will render a single book view.
-Link to this view on the book list route.
-
-
-### Required Knowledge
-
-* Javascript ES6
-* React
-
-Recommended
-* Redux
-* [React router](https://reacttraining.com/react-router/) 
-* [💅](https://github.com/styled-components/styled-components)
-
-### Software requirements
-* [YARN](https://yarnpkg.com/en/)
-
-#### Install
-
-Clone and run:
-
-```bash 
+## The First Tier
+I have fulfilled all tiers in the challenge. I tagged Tier 1 as it demonstrates as approach using `useAsync` which I feel would have been sufficient to meet the objectives of this stage but is later replaced
+~~~shell script
+git checkout tags/0.0.1
 yarn install
-yarn start
-```
-
-Make sure everything is working, a browser window should open at the address _http://localhost:3000/_ displaying "_Welcome!_".
-This route also accepts optional parameters to ensure that react-router is working correctly.
-
-Run the provided unit tests.
-
-```bash
-yarn test
-```
-
-## License
-
-[MIT license](http://opensource.org/licenses/MIT).
-Feel free to remix, use and contribute to this coding challenge.
+~~~

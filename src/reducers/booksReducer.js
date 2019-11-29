@@ -6,12 +6,12 @@ export default function booksReducer(state = initialState, action) {
     case LOAD_BOOKS_SUCCESS:
       return {
         ...state,
-        books: action.books
+        books: action.books,
       };
     case LOAD_BOOK_SUCCESS:
       return {
         ...state,
-        book: action.book
+        book: action.book,
       };
     default:
       return state;

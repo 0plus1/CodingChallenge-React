@@ -7,11 +7,10 @@ const getBooks = () => axios.get(process.env.REACT_APP_API_URL)
     data: camelcaseKeys(response.data),
   }));
 
-const getBook = (bookId) => getBooks().then(({data}) => {
-  return data.find(book => book.bookId === parseInt(bookId, 10));
-});
+const getBook = bookId => getBooks()
+  .then(({ data }) => data.find(book => book.bookId === parseInt(bookId, 10)));
 
-export default {
+export {
   getBooks,
   getBook,
 };
