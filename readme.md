@@ -15,6 +15,8 @@ Additional commands of interest
 yarn lint
 # run tests
 yarn test
+# run tests as if in pipeline
+yarn test:ci
 ~~~
 
 ## Assumptions and Approach

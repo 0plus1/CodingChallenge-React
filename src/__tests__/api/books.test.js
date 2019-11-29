@@ -7,7 +7,6 @@ describe('Testing Books API', () => {
   });
 
   describe('getBooks()', () => {
-
     beforeEach(() => {
       axios.get.mockImplementationOnce(async () => ({
         extra_field: 'data',
@@ -54,7 +53,6 @@ describe('Testing Books API', () => {
   });
 
   describe('getBook()', () => {
-
     it('should not return any book with no bookId provided', async () => {
       const result = await getBook();
       expect(result)
@@ -62,7 +60,6 @@ describe('Testing Books API', () => {
     });
 
     it('should not return matched book if bookId existed in database', async () => {
-
       axios.get.mockImplementationOnce(async () => ({
         extra_field: 'data',
         data: [
@@ -73,7 +70,7 @@ describe('Testing Books API', () => {
             published_at: '2017-06-30',
             author: 'Prof. Jane Doe',
             cover: 'https://lorempixel.com/640/480/?28970',
-          }
+          },
         ],
       }));
 

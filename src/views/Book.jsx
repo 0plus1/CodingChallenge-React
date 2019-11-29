@@ -9,13 +9,15 @@ import { bindActionCreators } from 'redux';
 
 const BookView = ({ book, loadBook, match }) => {
   const { bookId } = match.params;
+  let bookLoadingOrChanged = !book || book.bookId !== parseInt(bookId, 10);
+
   useEffect(() => {
-    if (!book) {
+    if (bookLoadingOrChanged) {
       loadBook(bookId);
     }
-  }, [loadBook, book, bookId]);
+  }, [loadBook, bookLoadingOrChanged, bookId]);
 
-  return book ? <BookResult {...book} /> : <Loading/>;
+  return !bookLoadingOrChanged ? <BookResult {...book} /> : <Loading/>;
 };
 
 BookView.propTypes = {
