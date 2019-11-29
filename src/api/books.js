@@ -1,14 +1,21 @@
 import axios from 'axios';
 import camelcaseKeys from 'camelcase-keys';
 
-const getBooks = () => axios.get(process.env.REACT_APP_API_URL)
-  .then(response => ({
+const apiRoute = process.env.REACT_APP_API_URL;
+const normaliseResponse = response =>
+  ({
     ...response,
     data: camelcaseKeys(response.data),
-  }));
+  });
 
-const getBook = bookId => getBooks()
-  .then(({ data }) => data.find(book => book.bookId === parseInt(bookId, 10)));
+const getBooks = () => axios.get(apiRoute)
+  .then(response => normaliseResponse(response));
+
+const getBook = bookId => axios.get(`${apiRoute}?book_id=${bookId}`)
+  .then(response => normaliseResponse(response))
+  .then(response => {
+    return response.data.length ? response.data[0] : undefined;
+  });
 
 export {
   getBooks,
