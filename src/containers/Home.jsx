@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { fetchBooks } from '../actions';
 import useFetchBooks from '../hooks/useFetchBooks';
 import Layout from '../components/Layout';
+import Loading from '../components/Loading';
 
 const BodyContainer = styled.div`
   width:100vw;
@@ -18,7 +19,7 @@ const Home = Layout(() => {
   console.log(books);
 
   if (!books || books.length === 0) {
-    return <div data-test="homeComponent">loading</div>;
+    return <Loading />;
   }
 
   return (
