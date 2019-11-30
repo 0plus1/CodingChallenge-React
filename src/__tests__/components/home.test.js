@@ -14,7 +14,7 @@ jest.mock('react-redux', () => ({
   useDispatch: () => jest.fn(),
 }));
 
-const setUp = () => shallow(<Home />).childAt(1).dive();
+const setUp = () => shallow(<Home />).childAt(1).childAt(0).dive();
 
 describe('<Home />', () => {
   describe('renders', () => {

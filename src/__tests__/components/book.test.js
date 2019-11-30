@@ -11,7 +11,7 @@ jest.mock('react-redux', () => ({
   useDispatch: () => jest.fn(),
 }));
 
-const setUp = () => withRouter(Book).childAt(1).dive();
+const setUp = () => withRouter(Book).childAt(1).childAt(0).dive();
 
 describe('<Book />', () => {
   describe('renders', () => {

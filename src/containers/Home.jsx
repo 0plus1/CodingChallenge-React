@@ -7,14 +7,8 @@ import useFetchBooks from '../hooks/useFetchBooks';
 import Layout from '../components/Layout';
 import Loading from '../components/Loading';
 
-const BodyContainer = styled.div`
-  width:100vw;
-  height:100vh;
-`;
-
 const Home = Layout(() => {
   const [books] = useFetchBooks();
-
 
   console.log(books);
 
@@ -23,12 +17,13 @@ const Home = Layout(() => {
   }
 
   return (
-    <BodyContainer data-test="homeComponent">
-      <h1>
-      Welcome!List
-      </h1>
+    <div data-test="homeComponent">
 
-    </BodyContainer>
+      <div>
+        Welcome!List
+      </div>
+
+    </div>
   );
 });
 
