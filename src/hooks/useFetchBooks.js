@@ -6,12 +6,7 @@ import { fetchBooks } from '../actions';
 const useFetchBooks = () => {
   const dispatch = useDispatch();
   const bookList = useSelector(({ books }) => books);
-
-
   useEffect(() => {
-    console.log('useFetchBooks');
-    console.log(13123123);
-
     dispatch(fetchBooks());
   }, []);
 
