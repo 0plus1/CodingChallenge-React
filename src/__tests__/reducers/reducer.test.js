@@ -1,5 +1,5 @@
-import types from '../actions/types';
-import booksReducer from '../reducers/booksReducer';
+import types from '../../actions/types';
+import booksReducer from '../../reducers/booksReducer';
 
 describe('Books Reducer', () => {
   it('Should return default state', () => {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBooks } from '../actions';
 import useFetchBooks from '../hooks/useFetchBooks';
+import Layout from '../components/Layout';
 
 const BookStyle = {
   display: 'flex',
@@ -10,7 +11,7 @@ const BookStyle = {
   justifyContent: 'center',
 };
 
-const Book = ({ match }) => {
+const Book = Layout(({ match }) => {
   useFetchBooks();
 
 
@@ -26,7 +27,7 @@ const Book = ({ match }) => {
       )}
     </div>
   );
-};
+});
 
 
 Book.propTypes = {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter, Route, Switch } from 'react-router';
-import Book from '../containers/Book';
-import { findByTestAtrr, withRouter } from '../../Utils';
+import Book from '../../containers/Book';
+import { findByTestAtrr, withRouter } from '../../../Utils';
 
 jest.mock('react-redux', () => ({
   useSelector: () => ({
@@ -28,7 +28,7 @@ jest.mock('react-redux', () => ({
   useDispatch: () => jest.fn(),
 }));
 
-const setUp = () => withRouter(Book);
+const setUp = () => withRouter(Book).childAt(1).dive();
 
 describe('<Book />', () => {
   describe('renders', () => {

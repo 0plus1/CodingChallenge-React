@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { fetchBooks } from '../actions';
 import useFetchBooks from '../hooks/useFetchBooks';
+import Layout from '../components/Layout';
 
 const BodyContainer = styled.div`
   width:100vw;
   height:100vh;
 `;
 
-const Home = () => {
+const Home = Layout(() => {
   const [books] = useFetchBooks();
 
 
@@ -28,7 +29,7 @@ const Home = () => {
 
     </BodyContainer>
   );
-};
+});
 
 
 Home.propTypes = {

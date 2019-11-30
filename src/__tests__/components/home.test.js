@@ -2,8 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter, Route, Switch } from 'react-router';
 import { Provider } from 'react-redux';
-import Home from '../containers/Home';
-import { findByTestAtrr, withRouter, testStore } from '../../Utils';
+import Home from '../../containers/Home';
+import {
+  findByTestAtrr, withRouter, testStore, withLayout,
+} from '../../../Utils';
 
 jest.mock('react-redux', () => ({
   useSelector: () => ({
@@ -29,10 +31,7 @@ jest.mock('react-redux', () => ({
   useDispatch: () => jest.fn(),
 }));
 
-const setUp = () => {
-  const wrapper = shallow(<Home />);
-  return wrapper;
-};
+const setUp = () => shallow(<Home />).childAt(1).dive();
 
 describe('<Home />', () => {
   describe('renders', () => {
