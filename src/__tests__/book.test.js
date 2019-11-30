@@ -1,9 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter, Route, Switch } from 'react-router';
-import { Provider } from 'react-redux';
-import Home from '../containers/Home';
-import { findByTestAtrr, withRouter, testStore } from '../../Utils';
+import Book from '../containers/Book';
+import { findByTestAtrr, withRouter } from '../../Utils';
 
 jest.mock('react-redux', () => ({
   useSelector: () => ({
@@ -29,12 +28,9 @@ jest.mock('react-redux', () => ({
   useDispatch: () => jest.fn(),
 }));
 
-const setUp = () => {
-  const wrapper = shallow(<Home />);
-  return wrapper;
-};
+const setUp = () => withRouter(Book);
 
-describe('<Home />', () => {
+describe('<Book />', () => {
   describe('renders', () => {
     let wrapper;
     beforeEach(() => {
@@ -42,7 +38,7 @@ describe('<Home />', () => {
     });
 
     it('without crashing', () => {
-      const component = findByTestAtrr(wrapper, 'homeComponent');
+      const component = findByTestAtrr(wrapper, 'bookComponent');
       expect(component.length).toBe(1);
     });
   });
