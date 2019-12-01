@@ -30,6 +30,11 @@ const ItemContainer = styled.div`
   border-radius: 5px;
   &:hover {
      background-color:${COLOR.lightBlue};
+     ${ItemText}{
+        p { 
+          color: white;
+        }
+     }
   }`;
 
 const List = ({ books }) => (
