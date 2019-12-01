@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { MemoryRouter, Route, Switch } from 'react-router';
 import Book from '../../containers/Book';
 import { findByTestAtrr, withRouter } from '../../../Utils';
 

@@ -1,16 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter, Route, Switch } from 'react-router';
-import { Provider } from 'react-redux';
 import Home from '../../containers/Home';
-import {
-  findByTestAtrr, withRouter, testStore, withLayout,
-} from '../../../Utils';
+import { findByTestAtrr } from '../../../Utils';
 
 jest.mock('react-redux', () => ({
-  useSelector: () => ({
-    books: [],
-  }),
+  useSelector: () => ([]),
   useDispatch: () => jest.fn(),
 }));
 

@@ -1,17 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchBooks } from '../actions';
 import useFetchBooks from '../hooks/useFetchBooks';
 import Layout from '../components/Layout';
 import useCurrentBook from '../hooks/useCurrentBook';
 import Loading from '../components/Loading';
-
-const BookStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
+import Item from '../components/Item';
 
 const Book = Layout(({ match }) => {
   const [books] = useFetchBooks();
@@ -25,11 +18,10 @@ const Book = Layout(({ match }) => {
   ) {
     return <Loading />;
   }
-  console.log(currentBook);
 
   return (
-    <div data-test="bookComponent" style={BookStyle}>
-      {currentBook.book_id}
+    <div data-test="bookComponent">
+      <Item book={currentBook} />
     </div>
   );
 });

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import COLOR from '../shared/color';
 
 const ListContainer = styled.div`
   width:100%;
@@ -9,19 +10,6 @@ const ListContainer = styled.div`
   padding: 30px 50px;
  `;
 
-const ItemContainer = styled.div`
-  width:100%;
-  height:50px;
-  padding: 10px 0px;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-evenly;
-  `;
-
-const ItemImage = styled.img`
-  width:80px;
-  height:80px;
-  `;
 
 const ItemText = styled.div`
   width:25%;
@@ -31,6 +19,20 @@ const ItemText = styled.div`
     margin:0;
     line-height:30px;
   }`;
+
+const ItemContainer = styled.div`
+  width:100%;
+  height:50px;
+  padding: 10px 0px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  transition: background-color 200ms linear;
+  &:hover {
+     background-color:${COLOR.lightBlue};
+  } 
+  `;
+
 
 const List = ({ books }) => (
   <ListContainer data-test="listComponent">
