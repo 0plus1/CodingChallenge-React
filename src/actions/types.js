@@ -1,5 +1,6 @@
 const types = {
-  GET_BOOKS: 'getBooks',
+  SET_BOOKS: 'setBooks',
+  SET_BOOK: 'setBook',
 };
 
 export default types;

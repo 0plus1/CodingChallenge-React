@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchBooks } from '../actions';
 import useFetchBooks from '../hooks/useFetchBooks';
 import Layout from '../components/Layout';
+import useCurrentBook from '../hooks/useCurrentBook';
+import Loading from '../components/Loading';
 
 const BookStyle = {
   display: 'flex',
@@ -12,19 +14,22 @@ const BookStyle = {
 };
 
 const Book = Layout(({ match }) => {
-  useFetchBooks();
+  const [books] = useFetchBooks();
+  const [currentBook] = useCurrentBook(match.params.book_id);
 
+  if (!books
+    || books.length === 0
+    || !match.params.book_id
+    || currentBook === {}
+    || currentBook === null
+  ) {
+    return <Loading />;
+  }
+  console.log(currentBook);
 
   return (
     <div data-test="bookComponent" style={BookStyle}>
-      <h1>
-      Welcome!Book
-      </h1>
-      {(match.params.testRouting) && (
-      <p>
-        {match.params.testRouting}
-      </p>
-      )}
+      {currentBook.book_id}
     </div>
   );
 });
@@ -33,7 +38,7 @@ const Book = Layout(({ match }) => {
 Book.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      testRouting: PropTypes.string.isRequired,
+      book_id: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

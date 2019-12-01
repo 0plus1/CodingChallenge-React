@@ -27,7 +27,7 @@ describe('Books Reducer', () => {
       },
     ];
     const newState = booksReducer(undefined, {
-      type: types.GET_BOOKS,
+      type: types.SET_BOOKS,
       payload: books,
     });
     expect(newState).toEqual(books);

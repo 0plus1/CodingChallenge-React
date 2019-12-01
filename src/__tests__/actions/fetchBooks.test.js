@@ -1,6 +1,6 @@
 import moxios from 'moxios';
 import { testStore } from '../../../Utils';
-import { fetchBooks } from '../../actions';
+import action from '../../actions';
 
 describe('fetchBooks action', () => {
   beforeEach(() => {
@@ -42,7 +42,7 @@ describe('fetchBooks action', () => {
       });
     });
 
-    return store.dispatch(fetchBooks()).then(() => {
+    return store.dispatch(action.fetchBooks()).then(() => {
       const newState = store.getState();
       expect(newState.books).toBe(expectedState);
     });

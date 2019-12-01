@@ -8,7 +8,7 @@ const Routes = () => (
   <Router history={createBrowserHistory()}>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/:testRouting?" component={Book} />
+      <Route exact path="/:book_id?" component={Book} />
     </Switch>
   </Router>
 );

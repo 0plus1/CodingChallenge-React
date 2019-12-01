@@ -31,7 +31,7 @@ export const testStore = (initialState) => {
 export const withRouter = component => shallow(
   <MemoryRouter initialEntries={['/test']}>
     <Switch>
-      <Route exact path="/:testRouting?" component={component} />
+      <Route exact path="/:book_id?" component={component} />
     </Switch>
   </MemoryRouter>,
 )

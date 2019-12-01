@@ -6,6 +6,7 @@ import { fetchBooks } from '../actions';
 import useFetchBooks from '../hooks/useFetchBooks';
 import Layout from '../components/Layout';
 import Loading from '../components/Loading';
+import List from '../components/List';
 
 const Home = Layout(() => {
   const [books] = useFetchBooks();
@@ -18,11 +19,7 @@ const Home = Layout(() => {
 
   return (
     <div data-test="homeComponent">
-
-      <div>
-        Welcome!List
-      </div>
-
+      <List books={books} />
     </div>
   );
 });

@@ -1,16 +1,26 @@
 import axios from 'axios';
 import types from './types';
 
-export const fetchBooks = () => async (dispatch) => {
+const fetchBooks = () => async (dispatch) => {
   await axios
     .get(process.env.REACT_APP_API_URL)
     .then((res) => {
       dispatch({
-        type: types.GET_BOOKS,
+        type: types.SET_BOOKS,
         payload: res.data,
       });
     })
-    .catch((err) => {
-      // console.log(err);
-    });
+    .catch(err => console.error(err));
+};
+
+const setBook = book => (dispatch) => {
+  dispatch({
+    type: types.SET_BOOK,
+    payload: book,
+  });
+};
+
+export default {
+  fetchBooks,
+  setBook,
 };
