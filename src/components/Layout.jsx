@@ -6,6 +6,7 @@ import Footer from './Footer';
 const BodyContainer = styled.div`
   width:100%;
   height:calc(100vh - 100px);
+  overflow-y:auto;
 `;
 
 
