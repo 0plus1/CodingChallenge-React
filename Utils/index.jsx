@@ -6,7 +6,6 @@ import { MemoryRouter, Route, Switch } from 'react-router';
 import { middlewares } from '../src/createStore';
 import rootReducer from '../src/reducers';
 
-
 export const findByTestAtrr = (component, attr) => {
   const wrapper = component.find(`[data-test='${attr}']`);
   return wrapper;
@@ -29,18 +28,14 @@ export const testStore = (initialState) => {
   return createStoreWithMiddleware(rootReducer, initialState);
 };
 
-export const withRouter = (component) => {
-  const wrapper = shallow(
-    <MemoryRouter initialEntries={['/test']}>
-      <Switch>
-        <Route exact path="/:testRouting?" component={component} />
-      </Switch>
-    </MemoryRouter>,
-  )
-    .dive(/* MemoryRouter */)
-    .dive(/* Switch */)
-    .dive(/* Route */)
-    .dive();
-  // console.log(wrapper.debug());
-  return wrapper;
-};
+export const withRouter = component => shallow(
+  <MemoryRouter initialEntries={['/test']}>
+    <Switch>
+      <Route exact path="/:testRouting?" component={component} />
+    </Switch>
+  </MemoryRouter>,
+)
+  .dive(/* MemoryRouter */)
+  .dive(/* Switch */)
+  .dive(/* Route */)
+  .dive();

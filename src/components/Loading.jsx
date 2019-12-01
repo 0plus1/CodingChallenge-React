@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import COLOR from '../shared/color';
 
 const spin = keyframes`
   0% {
@@ -13,12 +14,12 @@ const spin = keyframes`
 `;
 
 const Loader = styled.div`
-  position: absolute;
+    position: absolute;
     left: 47%;
     top: 45%;
-    border: 6px solid #bdaeae;
+    border: 6px solid lightblue;
     border-radius: 50%;
-    border-top: 6px solid #000000;
+    border-top: 6px solid ${COLOR.darkBlue};
     width: 100px;
     height: 100px;
     -webkit-animation: ${spin} 2s linear infinite;
@@ -26,7 +27,7 @@ const Loader = styled.div`
 `;
 
 const LoaderContainer = styled.div`
-     width:100%;
+    width:100%;
     height:100%;
     background-color:white;
 `;
