@@ -9,7 +9,6 @@ const BodyContainer = styled.div`
   overflow-y:auto;
 `;
 
-
 const Layout = WrappedComponent => class extends React.PureComponent {
   render() {
     return (

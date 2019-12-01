@@ -10,7 +10,6 @@ const ListContainer = styled.div`
   padding: 30px 50px;
  `;
 
-
 const ItemText = styled.div`
   width:25%;
   text-align:center;
@@ -28,11 +27,10 @@ const ItemContainer = styled.div`
   flex-direction:row;
   justify-content:space-evenly;
   transition: background-color 200ms linear;
+  border-radius: 5px;
   &:hover {
      background-color:${COLOR.lightBlue};
-  } 
-  `;
-
+  }`;
 
 const List = ({ books }) => (
   <ListContainer data-test="listComponent">
