@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LoadAllBooks, Selectors } from '../Ducks';
+import { Selectors } from '../Ducks';
 import { useDispatch, useSelector } from 'react-redux';
 import BookRow from '../components/BookRow';
 import * as _ from 'ramda';
@@ -17,25 +17,28 @@ const useStyles = makeStyles({
   },
 });
 
-const Home = ({ match }) => {
+const Single = (p) => {
   var d = useDispatch();
   const classes = useStyles();
   React.useEffect(() => {
-    d(LoadAllBooks());
+    d({type: 'SELECT_SINGLE', payload: p.match.params.id});
   }, []);
-  const books = useSelector(Selectors.booksSelector);
-  return books ? (
+  const book = useSelector(Selectors.singleBook);
+  const bookId = useSelector(Selectors.singleSelector);
+  console.log(book, bookId);
+  return book ? (
       <Table className={classes.table} aria-label="simple table">
 
-        {_.map(b => <BookRow book={b} />, books)}
+        {(<BookRow book={book} />)}
       </Table>
-  ) : 'Loading books...';
+  ) :  'Can\'t find book';
 }
-Home.propTypes = {
+Single.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
+      testRouting: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };
 
-export default Home;
+export default Single;
