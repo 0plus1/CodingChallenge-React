@@ -1,0 +1,22 @@
+@import "book";
+
+body {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  padding: 30px 15px;
+  width: 100%;
+  max-width: 1200px;
+
+  h1 {
+    text-align: center;
+  }
+}

@@ -1,31 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import "../style/index.scss";
+import Book from "../components/book";
 
-const HomeStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
+function Home() {
+    const [books, setBooks] = useState([]);
+    const [loading, setLoader] = useState(true);
 
-const Home = ({ match }) => (
-  <div style={HomeStyle}>
-    <h1>
-      Welcome!
-    </h1>
-    {(match.params.testRouting) && (
-      <p>
-        {match.params.testRouting}
-      </p>
-    )}
-  </div>
-);
+    const fetchBooks = async () => {
+        const {data} = await axios.get(`https://my-json-server.typicode.com/0plus1/CodingChallenge-react/books`);
+        setBooks(data);
+        if (data) setLoader(false);
+    }
 
-Home.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      testRouting: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+    useEffect(() => {
+        fetchBooks();
+    }, []);
+
+
+    return (
+        <div className="container">
+            {
+                !loading ?
+                    books.map(book => {
+                        return (<Book book={book} key={book.book_id}/>)
+                    })
+                    : <h1>Loading Books</h1>
+            }
+        </div>
+    )
+}
 
 export default Home;
