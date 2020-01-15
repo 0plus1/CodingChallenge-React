@@ -6,12 +6,6 @@ import createStore from '../store/createStore';
 import { loadBooks } from '../store/actions/books';
 import reducers from '../store/reducers';
 
-const HomeStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
-
 const store = createStore(reducers);
 
 const Home = ({ match }) => {
