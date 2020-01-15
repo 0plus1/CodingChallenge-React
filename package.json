@@ -22,7 +22,7 @@
     "sanitize.css": "^10.0.0"
   },
   "devDependencies": {
-    "enzyme": "^3.6.0",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",

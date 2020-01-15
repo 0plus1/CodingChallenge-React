@@ -19,12 +19,9 @@ const Home = ({ match }) => {
   useEffect(() => {
     axios.get(`https://my-json-server.typicode.com/0plus1/CodingChallenge-react/books`)
       .then(res => {
-        console.log('ress', res);
         store.dispatch(loadBooks(res.data))
       })
   });
-
-  console.log('stateeeee', store.getState());
 
   return (
     <Provider store={store}>
