@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 import BooksContainer from '../containers/BooksContainer';
 import { Provider } from 'react-redux';
