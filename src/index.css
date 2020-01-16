@@ -3,3 +3,7 @@ body {
     color: #341f97;
     font-weight: 100;
 }
+.inner-compnent{
+    display: inline-block;
+    margin: 0 10px;
+}

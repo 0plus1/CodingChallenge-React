@@ -5,16 +5,16 @@ import configureMockStore from 'redux-mock-store';
 
 const mockStore = configureMockStore();
 const store = mockStore({});
-import Home from '../views/Home';
+import Book from '../views/Book';
 
 describe('<Home />', () => {
   describe('renders', () => {
     it('H1 exist in page', () => {
       shallow(
         <Provider store={store}>
-           <Home />
+           <Book />
         </Provider>,
-      ).exists(<h1>Welcome! Book listing page</h1>);
+      ).exists(<h1>This is book detail page</h1>);
     });
   });
 });

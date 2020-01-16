@@ -5,12 +5,16 @@ import {
   Switch,
 } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import Home from './views/Home';
+import Homepage from './views/Home';
+import Book from './views/Book';
 
 const Routes = () => (
   <Router history={createBrowserHistory()}>
     <Switch>
-      <Route exact path="/:testRouting?" component={Home} />
+      <Route exact path="/:testRouting?" component={Homepage} />
+      <Route exact path='/book/:id' render={props => {
+          return <Book props={props}/>;
+       }} />
     </Switch>
   </Router>
 );
