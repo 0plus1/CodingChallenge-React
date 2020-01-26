@@ -1,45 +1,44 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { loadBooks, loadBookByID } from "../../redux/actions/bookActions";
-import BookDetail from "./BookDetail";
-import PropTypes from "prop-types";
-
-const BookDetailsPage = ({ books, loadBooks, book, ...props }) => {
-  useEffect(() => {
-    if (books.length === 0) {
-      loadBooks();
-    }
-  }, []);
-  function handleChange() {
-    alert("Clicked");
-  }
+import Card from "./Card";
+const BookDetailsPage = props => {
+  const book = props.book;
   return (
-    <div>
-      <BookDetail book={book} onClick={handleChange} />
+    <div
+      style={{
+        alignItems: "center",
+        justifyContent: "center",
+        display: "flex"
+      }}
+    >
+      {book.map(book => {
+        return (
+          <>
+            <Card>
+              <img
+                className='card-img-top'
+                src={book.cover}
+                alt='Photo of books'
+              />
+              {book.name} {book.isbn} {book.published_at} {book.author}
+              <Link to={"/book/" + book.book_id}>
+                <p>Learn More</p>
+              </Link>
+            </Card>
+          </>
+        );
+      })}
     </div>
   );
 };
-// export function getBookById(books, book_id) {
-//   console.log(books.find(book => book.book_id === book_id));
-//   return books.find(book => book.book_id === book_id) || null;
-// }
+
 const mapStateToProps = (state, ownProps) => {
-  const book_id = ownProps.match.params.book_id;
-  //   console.log(book_id);
-  //   const book = getBookById(state.books, book_id);
-  //   console.log(book);
+  const id = ownProps.match.params.book_id;
+  //console.log(id, state.books);
   return {
-    book: state.books.find(book => book.book_id === book_id),
-    books: state.books
+    book: state.books.filter(book => book.book_id === parseInt(id))
   };
 };
-const mapDispatchToProps = {
-  loadBooks,
-  loadBookByID
-};
-BookDetailsPage.propTypes = {
-  books: PropTypes.array.isRequired,
-  book: PropTypes.object.isRequired,
-  loadBooks: PropTypes.func.isRequired
-};
-export default connect(mapStateToProps, mapDispatchToProps)(BookDetailsPage);
+
+export default connect(mapStateToProps)(BookDetailsPage);

@@ -16,6 +16,7 @@ function App() {
         <Route path='/about' component={AboutPage} />
         <Route path='/books' component={BooksPage} />
         <Route path='/book/:book_id' component={BookDetailsPage} />
+        <Route path='/book/' component={BookDetailsPage} />
         <Route component={PageNotFound} />
       </Switch>
     </>

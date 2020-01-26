@@ -6,8 +6,9 @@ import BookList from "./BookList";
 
 const HomeStyle = {
   display: "flex",
-  alignItems: "center",
-  justifyContent: "center"
+  flexDirection: "column",
+  flexBasis: "100%",
+  flex: 1
 };
 const BooksPage = ({ books, loadBooks, ...props }) => {
   useEffect(() => {
@@ -17,7 +18,9 @@ const BooksPage = ({ books, loadBooks, ...props }) => {
   }, []);
   return (
     <div style={HomeStyle}>
-      <BookList books={books} />
+      <div className='row'>
+        <BookList books={books} />
+      </div>
     </div>
   );
 };
