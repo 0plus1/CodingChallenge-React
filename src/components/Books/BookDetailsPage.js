@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import Card from "./Card";
 const BookDetailsPage = props => {
   const book = props.book;
@@ -16,14 +17,10 @@ const BookDetailsPage = props => {
         return (
           <>
             <Card>
-              <img
-                className='card-img-top'
-                src={book.cover}
-                alt='Photo of books'
-              />
+              <img className='card-img-top' src={book.cover} alt={book.name} />
               {book.name} {book.isbn} {book.published_at} {book.author}
-              <Link to={"/book/" + book.book_id}>
-                <p>Learn More</p>
+              <Link to={"/books"}>
+                <p>Go Back</p>
               </Link>
             </Card>
           </>
@@ -31,6 +28,10 @@ const BookDetailsPage = props => {
       })}
     </div>
   );
+};
+
+BookDetailsPage.propTypes = {
+  book: PropTypes.array.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {

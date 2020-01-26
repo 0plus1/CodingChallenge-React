@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 
 const animatedCss = css`
   opacity: 1;
@@ -26,12 +26,9 @@ const StyledCard = styled.div`
 `;
 
 class Card extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      animated: false
-    };
-  }
+  state = {
+    animated: false
+  };
 
   componentDidMount() {
     setTimeout(() => {
