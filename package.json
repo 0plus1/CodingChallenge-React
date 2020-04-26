@@ -4,16 +4,23 @@
   "description": "Coding Challenge for React developers",
   "private": false,
   "dependencies": {
+    "axios": "^0.19.2",
+    "babel-plugin-styled-components": "^1.10.7",
+    "dotenv": "^8.2.0",
     "env-cmd": "^9.0.3",
     "history": "^4.9.0",
     "prop-types": "^15.6.2",
     "query-string": "^6.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.2.0",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.0.1",
-    "sanitize.css": "^10.0.0"
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sanitize.css": "^10.0.0",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "enzyme": "^3.6.0",
