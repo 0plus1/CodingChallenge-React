@@ -6,7 +6,8 @@ import Home from '../views/Home';
 describe('<Home />', () => {
   describe('renders', () => {
     it('without crashing', () => {
-      shallow(<Home />);
+      const wrapper = shallow(<Home />);
+      expect(wrapper).toBeTruthy();
     });
   });
 });
